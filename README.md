@@ -1,7 +1,7 @@
 # RefferBot
 
 
-RefferBot is a Python script designed to automate the process of submitting referrals to the "Tilting Futures" 'Refer-a-Friend' program. It uses Selenium to navigate the web form, populate fields, and submit entries based on data provided in an Excel spreadsheet. This project was created to efficiently submit multiple referrals for a contest.
+RefferBot is a Python script designed to automate the process of submitting referrals to a program. It uses Selenium to navigate the web form, populate fields, and submit entries based on data provided in an Excel spreadsheet. This project was created to efficiently submit multiple referrals for a contest.
 
 ## How It Works
 
@@ -9,7 +9,7 @@ The script launches a Chrome browser instance, navigates to the referral page, a
 
 ## Features
 
--   Automates submissions to the Tilting Futures "Refer-a-Friend" web form.
+-   Automates submissions to the web form.
 -   Reads referral contact information (name, email, phone) from an Excel (`.xlsx`) file.
 -   Fills in static referrer details automatically.
 -   Handles various form elements including text inputs, dropdown menus, and checkboxes.
@@ -69,4 +69,4 @@ The script will open a Chrome window and begin submitting entries from your Exce
 
 ## Disclaimer
 
-This script was built for a specific version of the "Tilting Futures" referral form. If the website's HTML structure, element IDs, or class names change, the script will likely fail and will require updates to function correctly.
+This script was built for a specific version of the referral form. If the website's HTML structure, element IDs, or class names change, the script will likely fail and will require updates to function correctly.
