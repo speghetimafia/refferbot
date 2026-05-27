@@ -5,12 +5,12 @@ import pandas as pd
 import time
 
 # Load data from spreadsheet
-file_path = "/Users/vaibhavkawal/Desktop/reffer/datag.xlsx"  # Change to your file path
+file_path = "path"  # Change to your file path
 df = pd.read_excel(file_path)
 
 # Setup WebDriver (Ensure chromedriver is installed)
 driver = webdriver.Chrome()
-driver.get("https://apply.tiltingfutures.org/register/refer-a-friend")
+driver.get("link")
 time.sleep(7)  # Wait for the page to load
 
 def apply_zoom():
@@ -37,10 +37,10 @@ for index, row in df.iterrows():
         apply_zoom()
 
         # Fill "Your Information" (Static details)
-        driver.find_element(By.ID, "form_c5a19cb2-5266-4a49-a52e-8d7383533b2f").send_keys("Vaibhav")
-        driver.find_element(By.ID, "form_91248d6d-029b-45a4-8b73-b9d1967d3c0f").send_keys("Kawal")
-        driver.find_element(By.ID, "form_19673c5a-b298-4f33-9299-d372a6158def").send_keys("vaibhavkawal12345@gmail.com")
-        driver.find_element(By.ID, "form_dacb24f2-b974-47cf-a724-e1c20d853490").send_keys("+91 9915388570")
+        driver.find_element(By.ID, "form_c5a19cb2-5266-4a49-a52e-8d7383533b2f").send_keys("first name")
+        driver.find_element(By.ID, "form_91248d6d-029b-45a4-8b73-b9d1967d3c0f").send_keys("last name")
+        driver.find_element(By.ID, "form_19673c5a-b298-4f33-9299-d372a6158def").send_keys("email")
+        driver.find_element(By.ID, "form_dacb24f2-b974-47cf-a724-e1c20d853490").send_keys("+number")
 
         # Select Country: India
         country_dropdown = Select(driver.find_element(By.ID, "form_54624d86-325e-4ce5-ac0c-310bdcec5f06"))
@@ -51,9 +51,9 @@ for index, row in df.iterrows():
 
         # Select Programs
         programs = [
-            "Take Action Lab: Accelerator",
-            "Take Action Lab: Environment & Sustainability",
-            "Take Action Lab: Human Rights"
+            "1",
+            "2",
+            "3"
         ]
         for program in programs:
             driver.find_element(By.XPATH, f"//label[contains(text(), '{program}')]").click()
